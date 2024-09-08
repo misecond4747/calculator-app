@@ -214,3 +214,15 @@ body {
   box-shadow: inset 4px -5px 3px var(--Dark-red-key-shadow);
   color: var(--White);
 }
+
+.attribution {
+  font-size: 11px;
+  text-align: center;
+  position: absolute;
+  bottom: 10px;
+  color: var(--secondary-text-color);
+  word-spacing: 2px;
+}
+.attribution a {
+  color: royalblue;
+}
