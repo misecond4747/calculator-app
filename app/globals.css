@@ -14,7 +14,9 @@
   --Dark-red-key-shadow: hsl(6, 70%, 34%);
   --grayish-orange-key-background: hsl(30, 25%, 89%);
   --Grayish-orange-key-shadow: hsl(28, 16%, 65%);
-
+  --first-keys-hover: rgb(140, 150, 180);
+  --second-keys-hover: rgb(216, 91, 77);
+  --main-keys-hover: var(--White);
   /* #### Text */
   --primary-text-color: hsl(221, 14%, 31%);
   --secondary-text-color: hsl(0, 0%, 100%);
@@ -37,7 +39,9 @@
   --Dark-red-key-shadow: hsl(25, 99%, 27%);
   --grayish-orange-key-background: hsl(45, 7%, 89%);
   --Grayish-orange-key-shadow: hsl(35, 11%, 61%);
-
+  --first-keys-hover: hsl(185, 33%, 44%);
+  --second-keys-hover: hsl(6, 60%, 60%);
+  -main-keys-hover: var(--White);
   /* #### Text */
   --primary-text-color: hsl(60, 10%, 19%);
   --secondary-text-color: hsl(60, 10%, 19%);
@@ -60,7 +64,9 @@
   --Dark-red-key-shadow: hsl(177, 92%, 70%);
   --grayish-orange-key-background: hsl(268, 47%, 21%);
   --Grayish-orange-key-shadow: hsl(290, 70%, 36%);
-
+  --first-keys-hover: hsl(281, 64%, 36%);
+  --second-keys-hover: hsl(176, 85%, 55%);
+  --main-keys-hover: var(--key-shadow);
   /* #### Text */
   --primary-text-color: hsl(52, 100%, 62%);
   --secondary-text-color: hsl(52, 100%, 62%);
@@ -193,6 +199,10 @@ body {
   text-align: center;
 }
 
+.key:hover:not(.reset, .del, .equal) {
+  background-color: var(--main-keys-hover);
+}
+
 .reset {
   grid-column: span 2;
   background-color: var(--key-background);
@@ -207,12 +217,21 @@ body {
   color: var(--White);
 }
 
+.reset:hover,
+.del:hover {
+  background-color: var(--first-keys-hover);
+}
+
 .equal {
   grid-column: span 2;
   width: 100%;
   background-color: var(--Red-key-background);
   box-shadow: inset 4px -5px 3px var(--Dark-red-key-shadow);
   color: var(--White);
+}
+
+.equal:hover {
+  background-color: var(--second-keys-hover);
 }
 
 .attribution {
